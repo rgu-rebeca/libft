@@ -36,21 +36,26 @@ static char	*ft_word_group(char const *s, int start, int end)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static void	ft_free_result(char **result, size_t word)
 {
-	int		i;
-	int		j;
-	int		h;
-	char	**result;
+	size_t	i;
 
 	i = 0;
-	j = 0;
+	while (i < word)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+}
+
+int	ft_split_aux(char const *s, char c, char **result, int j)
+{
+	size_t	h;
+	int		i;
+
 	h = 0;
-	if (!s)
-		return (NULL);
-	result = (char **)malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
-	if (!result)
-		return (NULL);
+	i = 0;
 	while (s[j])
 	{
 		if (s[j] != c)
@@ -58,16 +63,38 @@ char	**ft_split(char const *s, char c)
 			i = j;
 			while (s[j] != c && s[j])
 				j++;
-			result[h++] = ft_word_group(s, i, j);
+			result[h] = ft_word_group(s, i, j);
+			if (!result[h])
+			{
+				ft_free_result(result, h);
+				return (0);
+			}
+			h++;
 		}
 		else
 			j++;
 	}
 	result[h] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		j;
+	char	**result;
+
+	j = 0;
+	if (!s)
+		return (NULL);
+	result = (char **)malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
+	if (!result)
+		return (NULL);
+	if (!ft_split_aux(s, c, result, j))
+		return (NULL);
 	return (result);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*str1 = "HELLO world por fin !!";
 	char	c = ' ';
@@ -85,4 +112,4 @@ int	main(void)
 	}
 	else
 	printf ("error");
-}
+}*/

@@ -1,6 +1,6 @@
 #include "libft.h"
 
-t_list	*ft_auxiliar(void	*new_content, t_list **result, void	(*del)(void *))
+t_list	*ft_auxiliar(void *new_content, t_list **result, void (*del)(void *))
 {
 	t_list	*new_node;
 

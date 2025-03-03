@@ -6,7 +6,7 @@
 #    By: rgu <rgu@student.42madrid.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/23 19:48:48 by ruijia            #+#    #+#              #
-#    Updated: 2025/03/02 19:22:07 by rgu              ###   ########.fr        #
+#    Updated: 2025/03/03 21:34:34 by rgu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,8 @@ SRCS    = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 
 OBJS    = $(SRCS:.c=.o)
 
-BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c \
-			 ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstlast.c ft_lstsize.c
+BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+			 ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c ft_lstlast_bonus.c ft_lstsize_bonus.c
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
