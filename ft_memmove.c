@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgu <rgu@student.42madrid.com>             +#+  +:+       +#+        */
+/*   By: ruijia <ruijia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:41:23 by ruijia            #+#    #+#             */
-/*   Updated: 2025/03/02 21:48:51 by rgu              ###   ########.fr       */
+/*   Updated: 2025/03/12 21:52:44 by ruijia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
-	if (b > a)
+	else
 	{
-		i = n;
-		while (i > 0)
-		{
-			b[i - 1] = a[i - 1];
-			i--;
-		}
+		while (n--)
+			b[n] = a[n];
 	}
 	return (dest);
 }
