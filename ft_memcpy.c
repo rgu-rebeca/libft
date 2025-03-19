@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rgu <rgu@student.42madrid.com>             +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:58:41 by ruijia            #+#    #+#             */
-/*   Updated: 2025/03/02 21:45:26 by rgu              ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -18,7 +7,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*a;
 	unsigned char		*b;
 
-	if (!dest && !src)
+	if ((!dest && !src))
 		return (NULL);
 	i = 0;
 	a = (const unsigned char *)src;

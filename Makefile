@@ -6,13 +6,13 @@
 #    By: rgu <rgu@student.42madrid.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/23 19:48:48 by ruijia            #+#    #+#              #
-#    Updated: 2025/03/03 21:34:34 by rgu              ###   ########.fr        #
+#    Updated: 2025/03/19 21:58:45 by rgu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME    = libft.a
-CC      = gcc
+CC      = cc
 CFLAGS  = -Wall -Wextra -Werror
 
 # Si tus archivos fuente están en un directorio "src", descomenta las siguientes líneas:
