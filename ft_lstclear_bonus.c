@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <stdio.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
@@ -41,6 +42,7 @@ int	main(void)
 	ft_lstadd_back(&node1, ft_lstnew(content2));
 	print_list(node1);
 	ft_lstclear(&node1, del);
+	print_list(node1);
 	printf("deletion done");
 	return 0;
 }*/

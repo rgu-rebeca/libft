@@ -21,6 +21,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	int c = 'w';
 	size_t  n = 3;
 	void    *result = ft_memchr(a, c, n);
-	printf ("the first ocurrence of the letter %c is %s", c, (char*) result);
+	printf ("the first ocurrence of the letter %c is %s\n", c, (char*) result);
 	return 0;
 }*/

@@ -24,10 +24,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 /*int	main(void)
 {
 	const char	src[20] = "lorem ipsum";
-	char	dest[3] = "qwe";
-	int	dstsize = 3;
+	char	dest[4] = "qwe";
+	int	dstsize = 4;
 	int	srcsize = ft_strlcpy(dest, src, dstsize);
-	printf("the dest size is: %d", dstsize);
-	printf("the src size is: %d", srcsize);
-	printf("the new dest is: %s", dest);
+	printf("the dest size is: %d\n", dstsize);
+	printf("the src size is: %d\n", srcsize);
+	printf("the new dest is: %s\n", dest);
 }*/

@@ -27,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 /*int main(void)
 {
-	int n = 0;
+	int n = INT_MIN;
 	int fd = 1;
 	ft_putnbr_fd(n, fd);
 	return 0;

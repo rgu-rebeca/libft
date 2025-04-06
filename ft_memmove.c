@@ -32,8 +32,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
     char buffer[20] = "Hola, mundo!"; 
     printf("Antes: %s\n", buffer);
     
-    ft_memmove(buffer, buffer + 2, 6);
-    printf("Después: %s\n", buffer);
+    char *result = ft_memmove(buffer + 2, buffer, 6);
+	buffer[8] = '\0';
+    printf("Después: %s\n", result);
     
     return 0;
 }*/

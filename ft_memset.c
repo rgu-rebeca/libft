@@ -14,3 +14,10 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*int	main(void)
+{
+	char str[5] = "nawe";
+	char *s = ft_memset(&str, 'b', 3);
+	printf("%s\n", s);
+}*/

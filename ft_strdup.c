@@ -21,3 +21,10 @@ char	*ft_strdup(const char *s)
 	ptr[i] = '\0';
 	return (ptr);
 }
+
+/*int	main(void)
+{
+	const char *str = "hojmk";
+	char *result = ft_strdup(str);
+	printf("%s\n", result);
+}*/
