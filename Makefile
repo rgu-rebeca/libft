@@ -5,23 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: rgu <rgu@student.42madrid.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/23 19:48:48 by ruijia            #+#    #+#              #
-#    Updated: 2025/03/19 21:58:45 by rgu              ###   ########.fr        #
+#    Created: 2025/04/07 16:43:59 by rgu               #+#    #+#              #
+#    Updated: 2025/04/07 16:44:01 by rgu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME    = libft.a
 CC      = cc
 CFLAGS  = -Wall -Wextra -Werror
 
-# Si tus archivos fuente están en un directorio "src", descomenta las siguientes líneas:
-# SRC_DIR = src
-# OBJ_DIR = obj
-# SRCS    = $(wildcard $(SRC_DIR)/*.c)
-# OBJS    = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS)
-
-# Si tus archivos fuente están en el mismo directorio que el Makefile, usa:
 SRCS    = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
           ft_memcmp.c ft_strlen.c ft_strdup.c\
           ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strnstr.c \
