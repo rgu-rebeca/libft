@@ -1,4 +1,4 @@
-📚 # Libft – My First C Library (42)
+📚 ** Libft – My First C Library (42) **
 
 🧠 About the project
 
