@@ -1,4 +1,4 @@
-## 📚 Libft – My First C Library (42)
+# 📚 Libft – My First C Library (42)
 
 ## 🧠 About the project
 
@@ -52,7 +52,7 @@ All functions are designed with careful memory handling and edge-case management
 
 Implementation of a generic linked list structure using:
 
-```c
+
 typedef struct s_list
 {
     void            *content;
