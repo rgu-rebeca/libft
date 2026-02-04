@@ -1,4 +1,5 @@
-📚 Libft – My First C Library (42)
+📚 # Libft – My First C Library (42)
+
 🧠 About the project
 
 Libft is my first project at 42 School and represents my first step into low-level programming in C.
