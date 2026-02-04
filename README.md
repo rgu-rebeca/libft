@@ -1,122 +1,62 @@
-📚 # Libft – My First C Library (42)
+# 📚 Libft – My First C Library (42)
 
-🧠 About the project
+## 🧠 About the project
 
-Libft is my first project at 42 School and represents my first step into low-level programming in C.
-The goal of this project is to recreate a personal C library by reimplementing a set of standard libc functions, as well as additional utility functions that will be reused in all future C projects.
+**Libft** is my first project at **42 School** and represents my first step into low-level programming in **C**.
 
-This project is not just about “making functions work”, but about understanding how they work internally, managing memory correctly, and writing clean, norm-compliant code. 
+The objective of this project is to build a personal C library by reimplementing a set of standard `libc` functions, along with additional utility functions. This library will be reused throughout future C projects at 42.
 
-Libft - Subject(EN)
+Beyond functionality, this project focuses on understanding how these functions work internally, handling memory safely, and writing clean, norm-compliant code.
 
-🎯 Project objectives
 
-Deeply understand how standard C functions behave
+## 🎯 Project objectives
 
-Learn manual memory management using malloc and free
+- Understand the internal behavior of standard C functions  
+- Learn and apply **manual memory management** (`malloc`, `free`)  
+- Write **robust, reusable and maintainable code**  
+- Follow the **42 Norm** strictly  
+- Build a strong foundation for future projects (`get_next_line`, `printf`, `minishell`, etc.)
 
-Write robust and reusable code
 
-Respect 42 Norm (strict coding standards)
 
-Build a solid foundation for future projects like get_next_line, printf, minishell, etc.
-
-🛠️ What’s inside
+## 🛠️ Project structure
 
 The library is divided into three main parts:
 
-1️⃣ Reimplementation of libc functions
+### 1️⃣ Libc function reimplementations
 
-Functions such as:
+Reimplementation of essential standard functions, all prefixed with `ft_`, such as:
 
-ft_memcpy, ft_memmove, ft_memset
+- Memory manipulation: `ft_memcpy`, `ft_memmove`, `ft_memset`, `ft_bzero`
+- String handling: `ft_strlen`, `ft_strdup`, `ft_strncmp`, `ft_strchr`
+- Character checks & conversions: `ft_isalpha`, `ft_isdigit`, `ft_toupper`, `ft_tolower`
+- Numeric conversion: `ft_atoi`
 
-ft_strlen, ft_strdup, ft_strncmp
-
-ft_atoi, ft_isalpha, ft_isdigit, …
-
-These functions strictly follow the behavior of their original libc counterparts.
-
-2️⃣ Additional utility functions
-
-Custom helper functions to work with:
-
-Memory (ft_memalloc, ft_memdel)
-
-Strings (ft_strjoin, ft_strtrim, ft_strsplit, ft_itoa, …)
-
-Output (ft_putchar, ft_putstr, ft_putnbr, and their _fd versions)
-
-3️⃣ Bonus – Linked lists
-
-Implementation of a generic linked list structure:
-
-Creation, deletion, iteration and mapping of lists
-
-Use of void * to store any data type
-
-Careful memory handling to avoid leaks
-
-🧩 Skills demonstrated in this project
-
-This first project allowed me to develop and demonstrate the following skills:
-
-🧠 Low-level understanding of C
-
-Pointer arithmetic and manipulation
-
-Explicit type casting
-
-Understanding undefined behavior and edge cases
-
-💾 Memory management
-
-Dynamic allocation and deallocation
-
-Avoiding memory leaks and segmentation faults
-
-Clear ownership of allocated memory
-
-🧱 Code structure & reusability
-
-Modular design (one function per file)
-
-Reuse of previously written functions
-
-Clean and readable code
-
-📏 Discipline & standards
-
-Strict compliance with the 42 Norm
-
-No forbidden functions
-
-No global variables
-
-Defensive programming mindset
-
-🧪 Problem-solving mindset
-
-Breaking complex problems into smaller subproblems
-
-Anticipating edge cases
-
-Testing functions independently
-
-⚙️ Compilation & usage
-make
+These functions strictly replicate the behavior of their original `libc` counterparts.
 
 
-This will generate the static library:
 
-libft.a
+### 2️⃣ Additional utility functions
+
+Custom helper functions to simplify work with:
+
+- **Memory**: `ft_memalloc`, `ft_memdel`
+- **Strings**: `ft_strjoin`, `ft_strtrim`, `ft_strsplit`, `ft_itoa`, `ft_strsub`
+- **Output**: `ft_putchar`, `ft_putstr`, `ft_putnbr` and their `_fd` variants
+
+All functions are designed with careful memory handling and edge-case management.
 
 
-You can then include it in your projects:
 
-#include "libft.h"
+### 3️⃣ Bonus – Linked lists
 
+Implementation of a generic linked list structure using:
 
-And compile with:
+```c
+typedef struct s_list
+{
+    void            *content;
+    size_t          content_size;
+    struct s_list   *next;
+} t_list;
 
-gcc your_program.c -L. -lft
